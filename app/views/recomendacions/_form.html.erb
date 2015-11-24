@@ -1,0 +1,48 @@
+<%= form_for(@recomendacion) do |f| %>
+  <% if @recomendacion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@recomendacion.errors.count, "error") %> prohibited this recomendacion from being saved:</h2>
+
+      <ul>
+      <% @recomendacion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tipo %><br>
+    <%= f.text_field :tipo %>
+  </div>
+  <div class="field">
+    <%= f.label :taller %><br>
+    <%= f.text_field :taller %>
+  </div>
+  <div class="field">
+    <%= f.label :direccion %><br>
+    <%= f.text_field :direccion %>
+  </div>
+  <div class="field">
+    <%= f.label :comuna %><br>
+    <%= f.text_field :comuna %>
+  </div>
+  <div class="field">
+    <%= f.label :ciudad %><br>
+    <%= f.text_field :ciudad %>
+  </div>
+  <div class="field">
+    <%= f.label :comentario %><br>
+    <%= f.text_area :comentario %>
+  </div>
+  <div class="field">
+    <%= f.label :calificacion %><br>
+    <%= f.text_field :calificacion %>
+  </div>
+  <div class="field">
+    <%= f.hidden_field :usuario_id, :value => current_usuario.id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

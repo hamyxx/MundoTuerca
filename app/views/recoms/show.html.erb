@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Recomendacion:</strong>
+  <%= @recom.recomendacion.tipo %>
+</p>
+
+<p>
+  <strong>Catereco:</strong>
+  <%= @recom.catereco.tipo %>
+</p>
+
+<%= link_to 'Edit', edit_recom_path(@recom) %> |
+<%= link_to 'Back', recoms_path %>

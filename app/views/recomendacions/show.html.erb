@@ -1,0 +1,46 @@
+<p id="notice"><%= notice %></p>
+
+  <% if current_usuario.email == @recomendacion.usuario.email %>
+<p>
+  <strong>Tipo:</strong>
+  <%= @recomendacion.tipo %>
+</p>
+
+<p>
+  <strong>Taller:</strong>
+  <%= @recomendacion.taller %>
+</p>
+
+<p>
+  <strong>Direccion:</strong>
+  <%= @recomendacion.direccion %>
+</p>
+
+<p>
+  <strong>Comuna:</strong>
+  <%= @recomendacion.comuna %>
+</p>
+
+<p>
+  <strong>Ciudad:</strong>
+  <%= @recomendacion.ciudad %>
+</p>
+
+<p>
+  <strong>Comentario:</strong>
+  <%= @recomendacion.comentario %>
+</p>
+
+<p>
+  <strong>Calificacion:</strong>
+  <%= @recomendacion.calificacion %>
+</p>
+
+<p>
+  <strong>Usuario:</strong>
+  <%= @recomendacion.usuario.email %>
+</p>
+
+<%= link_to 'Edit', edit_recomendacion_path(@recomendacion) %>
+<% end %>
+<%= link_to 'Back', recomendacions_path %>

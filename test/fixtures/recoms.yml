@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  recomendacion_id: 
+  catereco_id: 
+
+two:
+  recomendacion_id: 
+  catereco_id: 

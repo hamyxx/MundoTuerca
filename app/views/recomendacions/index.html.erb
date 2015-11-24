@@ -1,0 +1,43 @@
+<h1>Recomendaciones</h1>
+<p>Sea buena o mala tu experiencia con algun taller o conocido</p>
+<p>Cuentanos donde fue y quien te atendio</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Tipo</th>
+      <th>Taller</th>
+      <th>Direccion</th>
+      <th>Comuna</th>
+      <th>Ciudad</th>
+      <th>Comentario</th>
+      <th>Calificacion</th>
+      <th>Usuario</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recomendacions.each do |recomendacion| %>
+      <tr>
+        <% if current_usuario.email == recomendacion.usuario.email %>
+        <td><%= recomendacion.tipo %></td>
+        <td><%= recomendacion.taller %></td>
+        <td><%= recomendacion.direccion %></td>
+        <td><%= recomendacion.comuna %></td>
+        <td><%= recomendacion.ciudad %></td>
+        <td><%= recomendacion.comentario %></td>
+        <td><%= recomendacion.calificacion %></td>
+        <td><%= recomendacion.usuario.email %></td>
+        <td><%= link_to 'Show', recomendacion %></td>
+        <td><%= link_to 'Edit', edit_recomendacion_path(recomendacion) %></td>
+        <td><%= link_to 'Destroy', recomendacion, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva Recomendacion', new_recomendacion_path %>
+<BODY BACKGROUND="<%= asset_path 'rodamientos.jpg' %>">

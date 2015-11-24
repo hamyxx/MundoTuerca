@@ -1,0 +1,21 @@
+<%= form_for(@catereco) do |f| %>
+  <% if @catereco.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@catereco.errors.count, "error") %> prohibited this catereco from being saved:</h2>
+
+      <ul>
+      <% @catereco.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :tipo %><br>
+    <%= f.text_field :tipo %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

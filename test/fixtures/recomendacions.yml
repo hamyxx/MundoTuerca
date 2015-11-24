@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tipo: MyString
+  taller: MyString
+  direccion: MyString
+  comuna: MyString
+  ciudad: MyString
+  comentario: MyText
+  calificacion: MyString
+  usuario_id: 
+
+two:
+  tipo: MyString
+  taller: MyString
+  direccion: MyString
+  comuna: MyString
+  ciudad: MyString
+  comentario: MyText
+  calificacion: MyString
+  usuario_id: 

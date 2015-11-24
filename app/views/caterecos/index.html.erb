@@ -1,0 +1,27 @@
+
+<h1>Categorias</h1>
+<p>Indicanos a que categoria pertenece tu recomendacion</p>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Tipo de Servicio</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @caterecos.each do |catereco| %>
+      <tr>
+        <td><%= catereco.tipo %></td>
+        <td><%= link_to 'Show', catereco %></td>
+        <td><%= link_to 'Edit', edit_catereco_path(catereco) %></td>
+        <td><%= link_to 'Destroy', catereco, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Nueva Categoria', new_catereco_path %>
+<BODY BACKGROUND="<%= asset_path 'rodamientos.jpg' %>">
